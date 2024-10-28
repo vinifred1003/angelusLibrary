@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-3">
     <p-floatLabel>
       <input pInputText id="bookName" [(ngModel)]="value" />
@@ -8,4 +8,22 @@
   <div class="col-md-5">
     <input type="text" pInputText [(ngModel)]="valor1" />
   </div>
-</div>
+</div> -->
+<form> 
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="row" >
+          <div class="col-md-3">
+            <p-floatLabel>
+              <input pInputText id="bookName" [(ngModel)]="value" [ngModelOptions]="{standalone: true}" />
+              <label for="bookName">Nome do Livro</label>
+            </p-floatLabel>
+            
+          </div>
+          <div class="col-md-3">
+            <input type="text" pInputText [(ngModel)]="valor1" [ngModelOptions]="{standalone: true}" />
+          </div>
+        </div>
+      </div>
+    </div>
+</form>
