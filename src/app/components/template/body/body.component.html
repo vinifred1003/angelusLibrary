@@ -10,20 +10,56 @@
   </div>
 </div> -->
 <form> 
+  <br>
     <div class="d-flex justify-content-center align-items-center">
       <div class="container">
-        <div class="row" >
-          <div class="col-md-3">
+        <div class="row justify-content-center" >
+          <div class="col-md-5">
             <p-floatLabel>
-              <input pInputText id="bookName" [(ngModel)]="value" [ngModelOptions]="{standalone: true}" />
+              <input pInputText id="bookName" name="bookName" [(ngModel)]="value" [ngModelOptions]="{standalone: true}" />
               <label for="bookName">Nome do Livro</label>
             </p-floatLabel>
             
           </div>
-          <div class="col-md-3">
-            <input type="text" pInputText [(ngModel)]="valor1" [ngModelOptions]="{standalone: true}" />
+          <div class="col-md-4">
+            <p-floatLabel>
+              <p-inputMask 
+                mask="999-99-999-9999-9" 
+                [(ngModel)]="isbn_value" 
+                  id="isbn" name="isbn"
+                  [ngModelOptions]="{standalone: true}"/>
+              
+              <label for="isbn">Numero ISBN</label>
+            </p-floatLabel>
           </div>
         </div>
+        <br>
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <p-floatLabel>
+              <textarea 
+                  id="float-input" 
+                  rows="5" 
+                  pInputTextarea></textarea>
+              <label for="float-input">Sinopse</label>
+            </p-floatLabel>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+       <br>
+        <div class="row justify-content-center">
+          <div class="col-md-">
+            <p-floatLabel>
+              <p-chips id="categorias" [(ngModel)]="values3" [ngModelOptions]="{standalone: true}" placeholder="Pressione enter para separar as categorias"/>
+              <label for="categorias">Categorias</label>
+            </p-floatLabel>
+          </div>
+          <div class="col-md-3">
+            
+          </div>
+        </div>
+        
       </div>
     </div>
 </form>
